@@ -54,5 +54,8 @@ def clean_data():
     df['year'] = df['pickup_datetime'].dt.year
     df['hour'] = df['pickup_datetime'].dt.hour
 
+    df.drop(columns=['key', 'pickup_datetime'], inplace=True)
+    
+
     return df
 
